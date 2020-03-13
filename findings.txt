@@ -1,0 +1,36 @@
+The text editor registered all the features as objects
+I'll do analysis of the categorical features first and then see what pops up
+Categorical Features
+
+so the data set came with all features categorised as objects and so i had to convert most to integer values so we could see correlation.
+The total number of numric values we have in the dataset is set at 19.
+So next i'll group the categorical and the numerical features into sepreate dataframes and perform analysis on both sides
+Now that that's done, the next thing is to explore both parites and see what they have in them
+
+NUMERICAL FEATURES
+The scores in the first and second term have the best correlation with the final score in the last term
+
+Features with correlation are:
+1. G3: G1, G2, Medu
+2. G2: G1, G3, Medu Fedu
+3. G1: G2, G3, Medu, Fedu
+4. absecnces: age, Walc, Dalc
+5. Walc: Dalc, freetime, goout, failures, absences, age, traveltime
+6. Dalc: Walc, freetime, goout, failures, absences, age, traveltime
+7. goout : Walc, freetime, Dalc, age, failures, 
+8. famrel: freetime
+9. failures: age, Walc, Dalc
+10. Fedu: Medu, G1, G2, G3
+11. Medu: Fedu, G1, G2, G3.
+12. age: failures, absences, Dalc, goout, Walc
+
+So next i binned the G3 scores and I found the relationship between the score distribution in relation to other features.
+
+It should also be noted that most of the students in this distribution has scores higher than the set average with a percentage of 58.54%
+The percentage of students with scores lower than the set average is set at 25.77% and the percentage of students with average scores
+is set at 15.68%
+
+so I discretized the scores and converted them to categorical features. [below average, average, above average]
+
+I did all the necessary encoding and all.
+First Used Logistic regression and i got 
